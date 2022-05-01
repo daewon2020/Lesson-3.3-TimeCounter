@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Lesson_3_3_TimeCounterApp: App {
+    @StateObject private var storageManager = StorageManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterView()
+                .environmentObject(storageManager)
         }
     }
 }
